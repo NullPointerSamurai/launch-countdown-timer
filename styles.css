@@ -17,8 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  row-gap: 10rem;
+  justify-content: space-around;
   min-height: 100vh;
 }
 h1 {
@@ -35,48 +34,40 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border: 2px orange;
 }
 .counter-wrapper {
-  min-height: 120px;
+  width: 110px;
+  min-height: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 3rem;
+  margin-inline: 15px;
+  border: 1px yellow;
 }
 .counter {
   position: relative;
+  width: 110px;
+  min-height: 100px;
+  display: flex;
+  border: 2px red;
 }
 
-.black-dot-left {
-  position: relative;
-  left: -53px;
-  top: 15px;
-  background-color: hsl(234, 17%, 12%);
-  height: 10px;
-  width: 5px;
-  border-radius: 0 5px 5px 0;
-  z-index: 1;
-}
-.black-dot-right {
-  position: relative;
-  left: 53px;
-  top: 5px;
-  background-color: hsl(234, 17%, 12%);
-  height: 10px;
-  width: 5px;
-  border-radius: 5px 0 0 5px;
-  z-index: 5;
-}
 .card-wrapper {
   position: relative;
+  width: 110px;
+  min-height: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   transform-style: preserve-3d;
+  border: 2px green;
 }
 .card {
+  position: absolute;
+  top: 0;
   width: 110px;
   min-height: 100px;
   background-color: hsl(236, 21%, 26%);
@@ -84,17 +75,37 @@ h3 {
   align-items: center;
   justify-content: center;
   border-radius: 5px;
+  border: 2px blue;
+  z-index: 0;
 }
 .card-up {
-  position: absolute;
   background-color: hsl(237, 20%, 23%);
   transform: rotate3d(1, 0, 0, -10deg);
 }
 
 .card-down {
-  position: absolute;
   transform: rotate3d(1, 0, 0, 10deg);
   box-shadow: 0px 8px 2px hsl(234, 17%, 12%);
+}
+.black-dot-left {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  background-color: hsl(235, 16%, 14%);
+  height: 10px;
+  width: 5px;
+  border-radius: 0 5px 5px 0;
+  z-index: 5;
+}
+.black-dot-right {
+  position: absolute;
+  right: 0;
+  top: 45%;
+  background-color: hsl(235, 16%, 14%);
+  height: 10px;
+  width: 5px;
+  border-radius: 5px 0 0 5px;
+  z-index: 5;
 }
 
 .attribution {
