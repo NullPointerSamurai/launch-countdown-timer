@@ -43,7 +43,7 @@ let getRemainingTime = () => {
 
   //Animation functionality
 
-  let animateCards = () => {
+  /* let animateCards = () => {
     let topCards = document.querySelectorAll('.card-up');
     topCards.forEach((topCard) => {
       topCard.animate(
@@ -59,6 +59,7 @@ let getRemainingTime = () => {
       );
     });
   };
+  */
   animateCards();
 };
 setInterval(getRemainingTime, 1000);
