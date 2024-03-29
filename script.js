@@ -59,6 +59,6 @@ let getRemainingTime = () => {
       );
     });
   };
-  // animateCards();
+  animateCards();
 };
 setInterval(getRemainingTime, 1000);
