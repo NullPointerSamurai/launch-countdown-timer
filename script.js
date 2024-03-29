@@ -43,7 +43,7 @@ let getRemainingTime = () => {
 
   //Animation functionality
 
-  /* let animateCards = () => {
+  let animateCards = () => {
     let topCards = document.querySelectorAll('.card-up');
     topCards.forEach((topCard) => {
       topCard.animate(
@@ -58,28 +58,7 @@ let getRemainingTime = () => {
         }
       );
     });
-  };
-  */
-
-  let animateCards = () => {
-  let topCards = document.querySelectorAll('.card-up');
-  topCards.forEach((topCard) => {
-    topCard.animate(
-      [
-        // keyframes
-        { transform: 'rotateX(0deg)' },  
-        { transform: 'rotateX(360deg)' } 
-      ],
-      {
-        
-        duration: 1000,    
-        iterations: Infinity, 
-      }
-    );
-  });
-};
-
-animateCards();
+  };  
 
   animateCards();
 };
