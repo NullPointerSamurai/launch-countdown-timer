@@ -44,7 +44,7 @@ let getRemainingTime = () => {
   //Animation functionality
 
   let animateCards = () => {
-    let topCards = document.querySelectorAll('.card-up:last-child');
+    let topCards = document.querySelectorAll('.card-up');
     topCards.forEach((topCard) => {
       topCard.animate(
         [
