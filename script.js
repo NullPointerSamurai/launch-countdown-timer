@@ -1,3 +1,4 @@
+//Countdown functionality
 let countDownDate = new Date('Apr 3, 2024 20:37:25').getTime();
 let getRemainingTime = () => {
   let currentTime = new Date().getTime();
@@ -34,9 +35,30 @@ let getRemainingTime = () => {
       remainingSecond.innerHTML = seconds;
     });
   };
+
   getRemainingDays();
   getRemainingHours();
   getRemainingMinutes();
   getRemainingSeconds();
+
+  //Animation functionality
+
+  let animateCards = () => {
+    let topCards = document.querySelectorAll('.card-up');
+    topCards.forEach((topCard) => {
+      topCard.animate(
+        [
+          // keyframes
+          { transform: 'rotateX(-350deg)' },
+        ],
+        {
+          // timing options
+          duration: 1000,
+          iterations: Infinity,
+        }
+      );
+    });
+  };
+  // animateCards();
 };
 setInterval(getRemainingTime, 1000);
