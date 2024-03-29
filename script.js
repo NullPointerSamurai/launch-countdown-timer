@@ -1,5 +1,5 @@
 let countDownDate = new Date('Apr 3, 2024 20:37:25').getTime();
-function getRemainingTime() {
+let getRemainingTime = () => {
   let currentTime = new Date().getTime();
   let timeDifference = countDownDate - currentTime;
   let days = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
@@ -38,5 +38,5 @@ function getRemainingTime() {
   getRemainingHours();
   getRemainingMinutes();
   getRemainingSeconds();
-}
+};
 setInterval(getRemainingTime, 1000);
