@@ -114,13 +114,13 @@ h3 {
 
 .animate {
   animation-name: flipCard;
-  animation-duration: 2.2s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
 
 @keyframes flipCard {
-  100% {
-    transform: rotateX(-360deg);
+  to {
+    transform: rotateX(-90deg);
   }
 }
