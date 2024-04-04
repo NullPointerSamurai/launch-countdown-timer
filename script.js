@@ -1,5 +1,5 @@
 //Countdown functionality
-let countDownDate = new Date('Apr 3, 2024 20:37:25').getTime();
+let countDownDate = new Date('Apr 10, 2024 20:37:25').getTime();
 let getRemainingTime = () => {
   let currentTime = new Date().getTime();
   let timeDifference = countDownDate - currentTime;
@@ -43,22 +43,26 @@ let getRemainingTime = () => {
 
   //Animation functionality
 
-  let animateCards = () => {
-    let topCards = document.querySelectorAll('.card-up');
-    topCards.forEach((topCard) => {
-      topCard.animate(
-        [
-          // keyframes
-          { transform: 'rotateX(-350deg)' },
-        ],
-        {
-          // timing options
-          duration: 1000,
-          iterations: Infinity,
-        }
-      );
-    });
-  };
-  // animateCards();
+  if (seconds === 0) {
+    document.getElementById('minutes').classList.add('animate');
+    setTimeout(
+      () => document.getElementById('minutes').classList.remove('animate'),
+      1000
+    );
+  }
+  if (minutes === 0) {
+    document.getElementById('hours').classList.add('animate');
+    setTimeout(
+      () => document.getElementById('hours').classList.remove('animate'),
+      1000
+    );
+  }
+  if (hours === 0) {
+    document.getElementById('days').classList.add('animate');
+    setTimeout(
+      () => document.getElementById('days').classList.remove('animate'),
+      1000
+    );
+  }
 };
 setInterval(getRemainingTime, 1000);
