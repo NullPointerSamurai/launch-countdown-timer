@@ -1,4 +1,5 @@
 //Countdown functionality
+
 let countDownDate = new Date('Apr 10, 2024 20:37:25').getTime();
 let getRemainingTime = () => {
   let currentTime = new Date().getTime();
