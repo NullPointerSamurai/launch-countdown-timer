@@ -14,28 +14,82 @@
     <title>Frontend Mentor | Multi-step form</title>
   </head>
   <body>
-    <!-- Sidebar start -->
+    <main>
+      <!-- Sidebar Section -->
 
-    Step 1 Your info Step 2 Select plan Step 3 Add-ons Step 4 Summary
+      <section class="sideBar">
+        <div class="step">
+          <div class="step-num"></div>
+          <h3 class="step-name">
+            Step 1<span class="step-description"> Your info</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3 class="step-name">
+            Step 2<span class="step-description"> Select plan</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3 class="step-name">
+            Step 3<span class="step-description"> Add-ons</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num"></div>
+          <h3 class="step-name">
+            Step 4<span class="step-description">Summary</span>
+          </h3>
+        </div>
+      </section>
 
-    <!-- Sidebar end -->
+      <!-- Input Section -->
 
-    <!-- Step 1 start -->
-
-    Personal info Please provide your name, email address, and phone number.
-    Name e.g. Stephen King Email Address e.g. stephenking@lorem.com Phone Number
-    e.g. +1 234 567 890 Next Step
-
-    <!-- Step 1 end -->
-
-    <div class="attribution">
-      Challenge by
-      <a
-        href="https://www.frontendmentor.io?ref=challenge"
-        target="_blank"
-        rel="noopener"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+      <section class="mainForm">
+        <h1 class="title">Personal info</h1>
+        <h2 class="subtitle">
+          Please provide your name, email address, and phone number.
+        </h2>
+        <div class="form-container">
+          <form action="">
+            <label for="name">Name</label><br />
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. Stephen King"
+            /><br />
+            <label for="email">Email Address</label><br />
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. stephenking@lorem.com"
+            />
+            <label for="phone">Phone Number</label><br />
+            <input
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder=" e.g. +1 234
+            567 890"
+            />
+          </form>
+          <button type="submit" class="submit-btn">Next Step</button>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
   </body>
 </html>
