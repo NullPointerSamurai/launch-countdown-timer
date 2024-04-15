@@ -16,7 +16,18 @@
 <body>
     <main>
         <!-- Sidebar Section -->
-<p id="test1"></p>
+<div id="test1"></div>
+           <script>
+        // Retrieve the stored name from localStorage
+        let storedName = localStorage.getItem('name');
+
+        // Display the retrieved name in an element with the ID 'demo'
+        document.getElementById("test1").innerHTML = storedName;
+
+        // Show an alert with the stored name
+        alert("Stored name: " + storedName);
+    </script>
+        
         <section class="sidebar">
             <div class="step">
                 <div class="step-num">1</div>
