@@ -17,4 +17,15 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
 });
 
-// next one
+// step 2
+let storedName = localStorage.getItem('name');
+//var storedEmail = localStorage.getItem('email');
+//var storedPhone = localStorage.getItem('phone');
+// Display the retrieved name in an element with the ID 'demo'
+document.getElementById("demo").innerHTML = storedName;
+
+// Show an alert with the stored name
+alert("Stored name: " + storedName);
+
+
+});
