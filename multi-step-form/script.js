@@ -19,8 +19,9 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
 // step 2
 let storedName = localStorage.getItem('name');
-//var storedEmail = localStorage.getItem('email');
-//var storedPhone = localStorage.getItem('phone');
+//let storedEmail = localStorage.getItem('email');
+//let storedPhone = localStorage.getItem('phone');
+
 // Display the retrieved name in an element with the ID 'demo'
 document.getElementById("test1").innerHTML = storedName;
 
