@@ -1,4 +1,4 @@
-// store data from the form with id="userForm"
+// step 1 - store data from the form with id="userForm"
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault(); 
 
