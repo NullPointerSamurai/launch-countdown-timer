@@ -12,6 +12,4 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     localStorage.setItem('email', email);
     localStorage.setItem('phone', phone);
 
-    // Optionally, redirect to the next step
-    window.location.href = 'https://www.imdb.com/';
 });
