@@ -11,6 +11,9 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
     localStorage.setItem('name', name);
     localStorage.setItem('email', email);
     localStorage.setItem('phone', phone);
+    
+    // Redirect to the next page after storing the data
+    window.location.href = 'step-2.html';
 
 });
 
