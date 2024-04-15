@@ -27,5 +27,3 @@ document.getElementById("test1").innerHTML = storedName;
 // Show an alert with the stored name
 alert("Stored name: " + storedName);
 
-
-});
