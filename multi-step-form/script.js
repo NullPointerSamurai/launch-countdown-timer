@@ -4,8 +4,8 @@ document.getElementById('userForm').addEventListener('submit', function(event) {
 
     // Collect the form data
     let name = document.getElementById('name').value;
-    // let email = document.getElementById('email').value;
-    //let phone = document.getElementById('phone').value;
+    let email = document.getElementById('email').value;
+    let phone = document.getElementById('phone').value;
 
     // Store the data in localStorage
     localStorage.setItem('name', name);
