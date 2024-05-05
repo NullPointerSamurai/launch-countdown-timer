@@ -29,6 +29,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+  height: 100vh;
 }
 
 main {
@@ -44,6 +46,7 @@ main {
   justify-content: center;
   padding: 3rem 0 6rem 0;
 }
+
 .step-num {
   color: var(--white);
   display: flex;
@@ -55,9 +58,11 @@ main {
   border: 2px solid var(--white);
   border-radius: 50%;
   transition: 0.5s;
+  cursor: pointer;
 }
 .step-num:hover {
   background-color: var(--lightGray);
+  color: var(--marineBlue);
 }
 .step-name {
   display: none;
@@ -95,15 +100,59 @@ input {
   padding: 10px;
   border-radius: 5px;
 }
-.step1-btn {
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.btn-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.next-btn {
   color: var(--white);
   background-color: var(--marineBlue);
   padding: 10px 15px;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.prev-btn {
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
 }
 .error {
   color: red;
   margin-bottom: 20px;
+}
+.plan-container {
+  display: flex;
+  flex-direction: column;
+}
+.plan-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.plan {
+  display: flex;
+  align-items: start;
+  justify-content: flex-start;
+  border: 1px solid var(--lightGray);
+  padding: 1rem;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.plan-img {
+  margin-right: 1rem;
+}
+.plan-text {
+  display: flex;
+  flex-direction: column;
 }
 .attribution {
   font-size: 11px;
@@ -111,4 +160,48 @@ input {
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  main {
+    flex-direction: row;
+    background-color: var(--white);
+    min-height: 500px;
+    border-radius: 15px;
+    margin-top: 3rem;
+    padding: 1rem;
+  }
+  .sidebar {
+    background-image: url(/multi-step-form/assets/images/bg-sidebar-desktop.svg);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    padding: 2rem;
+    width: 250px;
+    border-radius: 15px;
+  }
+  .step {
+    display: flex;
+    flex-direction: row;
+  }
+  .step-name {
+    color: var(--lightGray);
+    font-weight: 400;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+  .step-name span {
+    color: var(--white);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  .info-section {
+    margin-inline: 10rem;
+    padding: 20px;
+    top: 0;
+    box-shadow: none;
+  }
 }
