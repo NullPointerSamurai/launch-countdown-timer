@@ -31,7 +31,7 @@
           </h3>
         </div>
         <div class="step">
-          <div class="step-num">2</div>
+          <div class="step-num num-highlight">2</div>
           <h3 class="step-name">
             Step 2<span class="step-description"> Select plan</span>
           </h3>
@@ -76,17 +76,29 @@
               <h3 class="plan-title">Pro</h3>
               <h4 class="plan-subtitle">$15/mo</h4></div>
             </div>
-            <div class="time-selector"></div>
+           
             
           </div>
-          <div class="btn-container">
+          <div class="time-selector">
+            <label class="radio-label" for="monthly">Monthly</label>
+            <input class="radio-input" type="radio" name="time-plan" id="monthly" checked>
+           <input class="radio-input" type="radio" name="time-plan" id="yearly">
+            <label class="radio-label" for="yearly">Yearly</label>
+           <div class="pill"></div>
+           <div class="circle"></div>
+          </div>
+          <div class="btn-wrapper desktop">
             <a class="prev-btn" href="index.html">Go Back</a>
             <a "><button  class="next-btn" type="submit" href="step-3.html">Next Step</button></a>
           </div>
         </div>
       </section>
+      <div class="btn-wrapper mobile">
+        <a class="prev-btn" href="index.html">Go Back</a>
+        <a "><button  class="next-btn" type="submit" href="step-3.html">Next Step</button></a>
+      </div>
     </main>
-
+  
     <footer>
       <div class="attribution">
         Challenge by
