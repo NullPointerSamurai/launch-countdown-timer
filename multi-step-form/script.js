@@ -19,18 +19,18 @@ const saveUserData = () => {
   );
 };
 
+//Validate form
+const validateForm = () => {
+  let valid = true;
+  //check inputs
+};
+
 //Movie to next step
 const goNextStep = () => {
   //prevent if input is not valid
   if (!validateForm()) {
     return false;
   }
-};
-
-//Validate form
-const validateForm = () => {
-  let valid = true;
-  //check for empty inputs
 };
 
 //Turn data to JSON
