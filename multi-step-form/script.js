@@ -25,12 +25,19 @@ const validateForm = () => {
   //check inputs
 };
 
-//Movie to next step
-const goNextStep = () => {
+//Move to next step
+const goToNextStep = () => {
   //prevent if input is not valid
   if (!validateForm()) {
     return false;
   }
+  //go to next step/page
+};
+
+const handleBtnClick = () => {
+  //validateForm()
+  //saveUserData()
+  //goToNextStep()
 };
 
 //Turn data to JSON
