@@ -33,6 +33,10 @@ const validateForm = () => {
   //check for empty inputs
 };
 
+//Turn data to JSON
+
+//Save JSON data to local storage
+
 //toggle plan for step 2
 const planArray = document.querySelectorAll('.plan');
 
