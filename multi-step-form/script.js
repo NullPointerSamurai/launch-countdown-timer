@@ -8,16 +8,16 @@ class User {
   }
 }
 
-//Save user input in new Object
-const saveUserData = () => {
-  userData.push(
-    new User(
-      document.getElementById('name').value,
-      document.getElementById('email').value,
-      document.getElementById('phone').value
-    )
+//Create new User Object
+const createNewUser = () => {
+  new User(
+    document.getElementById('name').value,
+    document.getElementById('email').value,
+    document.getElementById('phone').value
   );
 };
+
+//Update object with extra input
 
 //Validate form
 const validateForm = () => {
