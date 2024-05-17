@@ -66,10 +66,13 @@ main {
 .step-name {
   display: none;
 }
+.page {
+  display: none;
+}
 .info-section {
   background-color: var(--white);
   position: relative;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   top: -50px;
   margin-inline: 20px;
@@ -133,6 +136,7 @@ input {
   cursor: pointer;
 }
 .error {
+  visibility: hidden;
   color: red;
   margin-bottom: 20px;
 }
@@ -144,16 +148,37 @@ input {
   display: flex;
   flex-direction: column;
 }
-
+.radio-plan {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.plan-label {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+.plan .plan-label:focus-within {
+  background-color: var(--lightGray);
+}
 .plan {
+  position: relative;
   display: flex;
   align-items: start;
   justify-content: flex-start;
   border: 1px solid var(--lightGray);
-  padding: 1rem;
+
   margin-bottom: 10px;
   border-radius: 10px;
 }
+
 .plan-img {
   margin-right: 1rem;
 }
@@ -166,9 +191,6 @@ input {
   font-weight: 400;
 }
 
-.plan-selected {
-  background-color: var(--lightGray);
-}
 .time-selector {
   display: flex;
   position: relative;
@@ -233,8 +255,8 @@ input {
   main {
     flex-direction: row;
     background-color: var(--white);
-    min-width: 70%;
-    max-height: 550px;
+    max-width: 80%;
+    min-height: 550px;
     border-radius: 15px;
     margin-top: 3rem;
     padding: 1rem;

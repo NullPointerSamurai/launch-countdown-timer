@@ -22,7 +22,6 @@
   <body>
     <main>
       <!-- Sidebar Section -->
-
       <section class="sidebar">
         <div class="step">
           <div class="step-num num-highlight">1</div>
@@ -50,9 +49,9 @@
         </div>
       </section>
 
-      <!-- Info Section -->
+      <!-- Step 1 Section -->
 
-      <section class="info-section">
+      <section class="info-section page">
         <h1 class="title">Personal info</h1>
         <h2 class="subtitle">
           Please provide your name, email address, and phone number.
@@ -83,28 +82,152 @@
               placeholder=" e.g. +1 234 567 890"
               required
             />
-            <p class="error">The fields are required to be able to continue</p>
+            <p class="error" >The fields are required to be able to continue</p>
             <div class="btn-wrapper desktop btn-step-one">
-              <button type="button" class="next-btn" onclick="handleBtnClick()">Next Step</button>
+              <button
+                type="button"
+                id="nextBtn"
+                class="next-btn"
+                onclick="nextPrev(1)"
+              >
+                Next Step
+              </button>
             </div>
-        </div>
-      </section>
-    </form>
-    <div class="btn-wrapper mobile btn-step-one">
-      <button type="submit" onclick="handleBtnClick()" class="next-btn ">Next Step</button>
-    </div>
-    </main>
- 
-    <footer>
-      <div class="attribution">
-        Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          rel="noopener"
-          >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
-      </div>
-    </footer>
+            <!-- </section> -->
+          </form>
+          <div class="btn-wrapper mobile btn-step-one">
+            <button type="button" onclick="nextPrev(1)" class="next-btn">
+              Next Step
+            </button>
+          </div>
+        </section>
+          <!-- Step 2 Section -->
+
+          <section class="info-section page">
+            <h1 class="title">Select your plan</h1>
+            <h2 class="subtitle">
+              You have the option of monthly or yearly billing.
+            </h2>
+            <div class="plan-container">
+              <ul class="plan-wrapper">
+                <li class="plan">
+                  <label for="arcade" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                      title="arcade"
+                      type="radio"
+                      name="radio-plan"
+                      class="radio-plan"
+                      value="9"
+                      checked
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Arcade</h3>
+                      <h4 class="plan-subtitle">$9/mo</h4>
+                    </div>
+                  </label>
+                </li>
+                <li class="plan">
+                  <label for="advanced" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                      title="advanced"
+                      type="radio"
+                      name="radio-plan"
+                      class="radio-plan"
+                      value="12"
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Advanced</h3>
+                      <h4 class="plan-subtitle">$12/mo</h4>
+                    </div>
+                  </label>
+                </li>
+                <li class="plan">
+                  <label for="pro" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-pro.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                      title="pro"
+                      type="radio"
+                      name="radio-plan"
+                      class="radio-plan"
+                      value="personal"
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Pro</h3>
+                      <h4 class="plan-subtitle">$15/mo</h4>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+              <div class="time-selector">
+                <label class="radio-label" for="monthly">Monthly</label>
+                <input
+                  class="radio-input"
+                  type="radio"
+                  name="time-plan"
+                  id="monthly"
+                  checked
+                />
+                <input
+                  class="radio-input"
+                  type="radio"
+                  name="time-plan"
+                  id="yearly"
+                />
+                <label class="radio-label" for="yearly">Yearly</label>
+                <div class="pill"></div>
+                <div class="circle"></div>
+              </div>
+              <div class="btn-wrapper desktop">
+                <a class="prev-btn" href="index.html">Go Back</a>
+                <a
+                  ><button class="next-btn" type="submit" href="step-3.html">
+                    Next Step
+                  </button></a
+                >
+              </div>
+            </div>
+          </section>
+          </main>
+
+          <footer>
+            <div class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                rel="noopener"
+                >Frontend Mentor</a
+              >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+          </footer>
+     
+     
+   
   </body>
 </html>

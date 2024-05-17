@@ -1,58 +1,66 @@
-const userData = [];
+let currentPage = 0;
+const page = document.getElementsByClassName('page');
+const errorText = document.querySelector('.error');
+const inputs = page[currentPage].getElementsByTagName('input');
 
-class User {
-  constructor(name, email, phone) {
-    this.name = name;
-    this.email = email;
-    this.phone = phone;
-  }
-}
-
-//Create new User Object
-const createNewUser = () => {
-  new User(
-    document.getElementById('name').value,
-    document.getElementById('email').value,
-    document.getElementById('phone').value
-  );
-};
-
-//Update object with extra input
-
-//Validate form
 const validateForm = () => {
-  let valid = true;
-  //check inputs
+  let i,
+    valid = true;
+  for (i = 0; i < inputs.length; i++) {
+    if (inputs[i].value == '') {
+      inputs[i].className += ' invalid';
+      valid = false;
+      errorText.style.visibility = 'visible';
+    }
+  }
+  if (valid) {
+    document.getElementsByClassName('step')[currentPage].className += ' finish';
+    errorText.style.visibility = 'hidden';
+  }
+  return valid;
 };
 
-//Move to next step
-const goToNextStep = () => {
-  //prevent if input is not valid
-  if (!validateForm()) {
+const nextPrev = (n) => {
+  if (n == 1 && !validateForm()) return false;
+
+  page[currentPage].style.display = 'none';
+
+  currentPage += n;
+
+  if (currentPage >= page.length) {
+    document.getElementById('regForm').submit();
     return false;
   }
-  //go to next step/page
+
+  showTab(currentPage);
 };
 
-const handleBtnClick = () => {
-  //validateForm()
-  //saveUserData()
-  //goToNextStep()
+const showTab = (n) => {
+  page[n].style.display = 'flex';
+  //Possible functionality for next steps
+
+  // if (n == 0) {
+  //   document.getElementById('prevBtn').style.display = 'none';
+  // } else {
+  //   document.getElementById('prevBtn').style.display = 'inline';
+  // }
+  // if (n == page.length - 1) {
+  //   document.getElementById('nextBtn').innerHTML = 'Submit';
+  // } else {
+  //   document.getElementById('nextBtn').innerHTML = 'Next';
+  // }
+  // ... and run a function that displays the correct step indicator:
+  // fixStepIndicator(n);
 };
+showTab(currentPage);
 
-//Turn data to JSON
-
-//Save JSON data to local storage
-
-//toggle plan for step 2
-const planArray = document.querySelectorAll('.plan');
-
-const togglePlan = (event) => {
-  planArray.forEach((item) => {
-    if (item == event.target) {
-      item.classList.add('plan-selected');
-    } else {
-      item.classList.remove('plan-selected');
-    }
-  });
-};
+// function fixStepIndicator(n) {
+//   // This function removes the "active" class of all steps...
+//   var i,
+//     step = document.getElementsByClassName('step');
+//   for (i = 0; i < step.length; i++) {
+//     step[i].className = step[i].className.replace(' active', '');
+//   }
+//   //... and adds the "active" class to the current step:
+//   step[n].className += ' active';
+// }
