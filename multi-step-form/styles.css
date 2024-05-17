@@ -59,7 +59,7 @@ main {
   transition: 0.5s;
   cursor: pointer;
 }
-.num-highlight {
+.active {
   background-color: var(--lightGray);
   color: var(--marineBlue);
 }

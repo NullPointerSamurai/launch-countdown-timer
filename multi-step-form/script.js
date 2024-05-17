@@ -3,6 +3,7 @@ const page = document.getElementsByClassName('page');
 const errorText = document.querySelector('.error');
 const inputs = page[currentPage].getElementsByTagName('input');
 
+//form validation
 const validateForm = () => {
   let i,
     valid = true;
@@ -20,21 +21,30 @@ const validateForm = () => {
   return valid;
 };
 
+//page display -Prev/Next
 const nextPrev = (n) => {
   if (n == 1 && !validateForm()) return false;
-
   page[currentPage].style.display = 'none';
-
   currentPage += n;
-
   if (currentPage >= page.length) {
     document.getElementById('regForm').submit();
     return false;
   }
-
   showTab(currentPage);
 };
 
+//highlight current step number
+const indicateStep = (n) => {
+  let i,
+    step = document.getElementsByClassName('step-num');
+  for (i = 0; i < step.length; i++) {
+    step[i].className = step[i].className.replace(' active', '');
+  }
+
+  step[n].className += ' active';
+};
+
+//Show current Tab
 const showTab = (n) => {
   page[n].style.display = 'flex';
   //Possible functionality for next steps
@@ -50,17 +60,6 @@ const showTab = (n) => {
   //   document.getElementById('nextBtn').innerHTML = 'Next';
   // }
   // ... and run a function that displays the correct step indicator:
-  // fixStepIndicator(n);
+  indicateStep(n);
 };
 showTab(currentPage);
-
-// function fixStepIndicator(n) {
-//   // This function removes the "active" class of all steps...
-//   var i,
-//     step = document.getElementsByClassName('step');
-//   for (i = 0; i < step.length; i++) {
-//     step[i].className = step[i].className.replace(' active', '');
-//   }
-//   //... and adds the "active" class to the current step:
-//   step[n].className += ' active';
-// }
