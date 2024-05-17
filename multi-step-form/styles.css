@@ -224,20 +224,31 @@ input {
 #yearly:checked ~ .pill {
   background-color: var(--purplishBlue);
 }
+#monthly:checked ~ .circle {
+  left: 145px;
+}
 #yearly:checked ~ .circle {
   left: 177px;
 }
-#monthly:checked ~ .circle {
-  left: 146px;
-}
-.radio-input {
+
+.radio-time {
   display: none;
+  position: absolute;
 }
 .radio-label {
   display: inline-block;
   margin-block: 2rem;
   cursor: pointer;
+  width: 120px;
+  z-index: 9;
 }
+.monthly {
+  text-align: left;
+}
+.yearly {
+  text-align: right;
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
@@ -325,5 +336,11 @@ input {
   }
   .circle {
     margin-left: 37px;
+  }
+  #yearly:checked ~ .circle {
+    left: 183px;
+  }
+  #monthly:checked ~ .circle {
+    left: 150px;
   }
 }
