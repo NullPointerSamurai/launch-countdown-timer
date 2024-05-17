@@ -60,14 +60,17 @@
           <form action="">
             <label for="name">Name</label><br />
             <input
+            class="input"
               type="text"
               id="name"
               name="name"
               placeholder="e.g. Stephen King"
               required
+             
             /><br />
             <label for="email">Email Address</label><br />
             <input
+            class="input"
               type="email"
               id="email"
               name="email"
@@ -76,6 +79,7 @@
             /><br />
             <label for="phone">Phone Number</label><br />
             <input
+            class="input"
               type="tel"
               id="phone"
               name="phone"
@@ -121,10 +125,11 @@
                     </div>
 
                     <input
+                    id="arcade"
+                    class="radio-plan input"
                       title="arcade"
                       type="radio"
                       name="radio-plan"
-                      class="radio-plan"
                       value="9"
                       checked
                     />
@@ -146,10 +151,11 @@
                     </div>
 
                     <input
+                    id="advanced"
+                    class="radio-plan input"
                       title="advanced"
                       type="radio"
                       name="radio-plan"
-                      class="radio-plan"
                       value="12"
                     />
 
@@ -170,11 +176,12 @@
                     </div>
 
                     <input
+                    id="pro"
+                    class="radio-plan input"
                       title="pro"
                       type="radio"
                       name="radio-plan"
-                      class="radio-plan"
-                      value="personal"
+                      value="15"
                     />
 
                     <div class="plan-text">
@@ -187,7 +194,7 @@
               <div class="time-selector">
                 <label class="radio-label monthly" for="monthly">Monthly</label>
                 <input
-                  class="radio-time"
+                  class="radio-time input"
                   type="radio"
                   name="time-plan"
                   id="monthly"
@@ -195,7 +202,7 @@
                
                 <label class="radio-label yearly" for="yearly">Yearly</label>
                 <input
-                  class="radio-time"
+                  class="radio-time input"
                   type="radio"
                   name="time-plan"
                   id="yearly"

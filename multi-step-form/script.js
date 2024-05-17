@@ -1,7 +1,18 @@
 let currentPage = 0;
+const data = {};
 const page = document.getElementsByClassName('page');
 const errorText = document.querySelector('.error');
 const inputs = page[currentPage].getElementsByTagName('input');
+
+//Update inserted data
+const updateData = () => {
+  const allInputs = document.querySelectorAll('.input');
+  allInputs.forEach((input) => {
+    data[input.id] = input.value;
+    //!!!need to add functionality for checked radio buttons!!!
+  });
+  console.log(data);
+};
 
 //form validation
 const validateForm = () => {
@@ -17,6 +28,7 @@ const validateForm = () => {
   if (valid) {
     document.getElementsByClassName('step')[currentPage].className += ' finish';
     errorText.style.visibility = 'hidden';
+    updateData();
   }
   return valid;
 };
@@ -63,3 +75,5 @@ const showTab = (n) => {
   indicateStep(n);
 };
 showTab(currentPage);
+
+console.log(data);
