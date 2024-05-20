@@ -168,13 +168,13 @@ input {
 .plan .plan-label:focus-within {
   background-color: var(--lightGray);
 }
+
 .plan {
   position: relative;
   display: flex;
   align-items: start;
   justify-content: flex-start;
   border: 1px solid var(--lightGray);
-
   margin-bottom: 10px;
   border-radius: 10px;
 }
@@ -191,6 +191,10 @@ input {
   font-weight: 400;
 }
 
+.free-text {
+  margin-top: 1rem;
+  visibility: hidden;
+}
 .time-selector {
   display: flex;
   position: relative;
@@ -322,8 +326,8 @@ input {
     gap: 1rem;
   }
   .plan {
-    width: 130px;
-    height: 130px;
+    width: 150px;
+    height: 150px;
     flex-direction: column;
     transition: border 0.5s;
     cursor: pointer;
@@ -338,9 +342,9 @@ input {
     margin-left: 37px;
   }
   #yearly:checked ~ .circle {
-    left: 183px;
+    left: 209px;
   }
   #monthly:checked ~ .circle {
-    left: 150px;
+    left: 175px;
   }
 }

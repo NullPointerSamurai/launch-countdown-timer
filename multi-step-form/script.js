@@ -3,7 +3,14 @@ const data = {};
 const page = document.getElementsByClassName('page');
 const errorText = document.querySelector('.error');
 const inputs = page[currentPage].getElementsByTagName('input');
-
+const radioButtons = document.querySelectorAll('.radio-plan');
+const arcadePrice = document.getElementById('arcade-price');
+const advancedPrice = document.getElementById('advanced-price');
+const proPrice = document.getElementById('pro-price');
+const freeText = document.querySelectorAll('.free-text');
+const monthly = document.getElementById('monthly');
+const yearly = document.getElementById('yearly');
+console.log(monthly.checked);
 //Update inserted data
 const updateData = () => {
   const allInputs = document.querySelectorAll('.input');
@@ -12,6 +19,33 @@ const updateData = () => {
     //!!!need to add functionality for checked radio buttons!!!
   });
   console.log(data);
+};
+
+//set Subscription duration
+const setMonthly = () => {
+  arcadePrice.innerText = '$9/mo';
+  advancedPrice.innerText = '$12/mo';
+  proPrice.innerText = '$15/mo';
+  freeText.forEach((text) => {
+    text.style.visibility = 'hidden';
+  });
+};
+
+const setYearly = () => {
+  arcadePrice.innerText = '$90/yr';
+  advancedPrice.innerText = '$120/yr';
+  proPrice.innerText = '$150/yr';
+  freeText.forEach((text) => {
+    text.style.visibility = 'visible';
+  });
+};
+const toggleSubscription = () => {
+  console.log();
+  if (monthly.checked) {
+    setMonthly();
+  } else if (yearly.checked) {
+    setYearly();
+  }
 };
 
 //form validation
@@ -28,6 +62,7 @@ const validateForm = () => {
   if (valid) {
     document.getElementsByClassName('step')[currentPage].className += ' finish';
     errorText.style.visibility = 'hidden';
+
     updateData();
   }
   return valid;
@@ -75,5 +110,3 @@ const showTab = (n) => {
   indicateStep(n);
 };
 showTab(currentPage);
-
-console.log(data);

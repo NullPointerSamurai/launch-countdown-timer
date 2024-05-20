@@ -131,12 +131,14 @@
                       type="radio"
                       name="radio-plan"
                       value="9"
-                      checked
+                      checked="checked"
+                      required 
                     />
 
                     <div class="plan-text">
                       <h3 class="plan-title">Arcade</h3>
-                      <h4 class="plan-subtitle">$9/mo</h4>
+                      <h4 id="arcade-price" class="plan-subtitle">$9/mo</h4>
+                      <p class="free-text">2 months free</p>
                     </div>
                   </label>
                 </li>
@@ -161,7 +163,8 @@
 
                     <div class="plan-text">
                       <h3 class="plan-title">Advanced</h3>
-                      <h4 class="plan-subtitle">$12/mo</h4>
+                      <h4 id="advanced-price" class="plan-subtitle">$12/mo</h4>
+                      <p class="free-text">2 months free</p>
                     </div>
                   </label>
                 </li>
@@ -186,29 +189,32 @@
 
                     <div class="plan-text">
                       <h3 class="plan-title">Pro</h3>
-                      <h4 class="plan-subtitle">$15/mo</h4>
+                      <h4 id="pro-price" class="plan-subtitle">$15/mo</h4>
+                      <p class="free-text">2 months free</p>
                     </div>
                   </label>
                 </li>
               </ul>
               <div class="time-selector">
-                <label class="radio-label monthly" for="monthly">Monthly</label>
+                <label class="radio-label monthly" for="monthly" onclick="setMonthly()">Monthly</label>
                 <input
                   class="radio-time input"
                   type="radio"
                   name="time-plan"
                   id="monthly"
+                  value="monthly"
                   checked/>
                
-                <label class="radio-label yearly" for="yearly">Yearly</label>
+                <label class="radio-label yearly" for="yearly" onclick="setYearly()">Yearly</label>
                 <input
                   class="radio-time input"
                   type="radio"
                   name="time-plan"
                   id="yearly"
+                  value="yearly"
                 />
            
-                <div class="pill"></div>
+                <div class="pill" onclick="toggleSubscription()"></div>
                 <div class="circle"></div>
               </div>
               <div class="btn-wrapper desktop">
