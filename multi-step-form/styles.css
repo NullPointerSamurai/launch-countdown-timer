@@ -335,6 +335,9 @@ input {
     transition: border 0.5s;
     cursor: pointer;
   }
+  .plan-img {
+    width: 3rem;
+  }
   .plan:hover {
     border: 1px solid var(--purplishBlue);
   }
