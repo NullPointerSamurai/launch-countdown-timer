@@ -97,7 +97,7 @@
                 Next Step
               </button>
             </div>
-            <!-- </section> -->
+           
           </form>
           <div class="btn-wrapper mobile btn-step-one">
             <button type="button" onclick="nextPrev(1)" class="next-btn">
@@ -105,6 +105,7 @@
             </button>
           </div>
         </section>
+      
           <!-- Step 2 Section -->
 
           <section class="info-section page">
@@ -203,7 +204,7 @@
                   name="time-plan"
                   id="monthly"
                   value="monthly"
-                  />
+                  checked/>
                
                 <label class="radio-label yearly" for="yearly" onclick="setYearly()">Yearly</label>
                 <input
@@ -214,17 +215,20 @@
                   value="yearly"
                 />
            
-                <div class="pill" "></div>
+                <div class="pill" onclick="toggleSubscription()"></div>
                 <div class="circle"></div>
               </div>
               <div class="btn-wrapper desktop">
                 <a class="prev-btn" href="index.html">Go Back</a>
-               <button class="next-btn" type="submit"  onclick="nextPrev(2)">
+                <a
+                  ><button class="next-btn" type="submit" href="step-3.html">
                     Next Step
-                  </button>
+                  </button></a
+                >
               </div>
             </div>
           </section>
+      
           </main>
 
           <footer>
