@@ -159,6 +159,7 @@ input {
   cursor: pointer;
 }
 .plan-label {
+  display: flex;
   width: 100%;
   height: 100%;
   padding: 1rem;
@@ -181,6 +182,8 @@ input {
 
 .plan-img {
   margin-right: 1rem;
+  width: 4rem;
+  height: auto;
 }
 .plan-text {
   display: flex;
@@ -347,7 +350,9 @@ input {
   #yearly:checked ~ .circle {
     left: 209px;
   }
-
+  .plan-label {
+    display: inline;
+  }
   .radio-label {
     width: 143px;
   }
