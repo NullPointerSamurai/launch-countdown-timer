@@ -3,7 +3,6 @@ const data = {};
 const page = document.getElementsByClassName('page');
 const errorText = document.querySelector('.error');
 const inputs = page[currentPage].getElementsByTagName('input');
-const radioButtons = document.querySelectorAll('.radio-plan');
 const arcadePrice = document.getElementById('arcade-price');
 const advancedPrice = document.getElementById('advanced-price');
 const proPrice = document.getElementById('pro-price');
@@ -14,9 +13,7 @@ const arcadeInput = document.getElementById('arcade');
 const advancedInput = document.getElementById('advanced');
 const proInput = document.getElementById('pro');
 const planRadios = document.querySelectorAll('.radio-plan');
-const timeRadios = document.querySelectorAll('.radio-time');
 const planLabels = document.querySelectorAll('.plan-label');
-const arcadeLabel = document.getElementById('arcade-label');
 
 //clear form inputs on load
 const clearForm = () => {
@@ -102,7 +99,7 @@ const setMonthly = () => {
   arcadeInput.value = 9;
   advancedInput.value = 12;
   proInput.value = 15;
-  monthly.checked = 'checked';
+  monthly.checked = 'true';
   freeText.forEach((text) => {
     text.style.visibility = 'hidden';
   });
@@ -116,7 +113,7 @@ const setYearly = () => {
   arcadeInput.value = 90;
   advancedInput.value = 120;
   proInput.value = 150;
-  yearly.checked = 'checked';
+  yearly.checked = 'true';
   freeText.forEach((text) => {
     text.style.visibility = 'visible';
   });
