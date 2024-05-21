@@ -60,7 +60,7 @@
           <form action="">
             <label for="name">Name</label><br />
             <input
-            class="input"
+            class="input text-input"
               type="text"
               id="name"
               name="name"
@@ -70,7 +70,7 @@
             /><br />
             <label for="email">Email Address</label><br />
             <input
-            class="input"
+            class="input text-input"
               type="email"
               id="email"
               name="email"
@@ -79,7 +79,7 @@
             /><br />
             <label for="phone">Phone Number</label><br />
             <input
-            class="input"
+            class="input text-input"
               type="tel"
               id="phone"
               name="phone"
@@ -113,10 +113,10 @@
             <h2 class="subtitle">
               You have the option of monthly or yearly billing.
             </h2>
-            <div class="plan-container">
+            <form  class="plan-container">
               <ul class="plan-wrapper">
                 <li class="plan">
-                  <label for="arcade" class="plan-label">
+                  <label for="arcade" class="plan-label" id="arcade-label">
                     <div class="plan-img">
                       <img
                         src="./assets/images/icon-advanced.svg"
@@ -215,18 +215,16 @@
                   value="yearly"
                 />
            
-                <div class="pill" onclick="toggleSubscription()"></div>
+                <div class="pill" ></div>
                 <div class="circle"></div>
               </div>
               <div class="btn-wrapper desktop">
                 <a class="prev-btn" href="index.html">Go Back</a>
-                <a
-                  ><button class="next-btn" type="submit" href="step-3.html">
+                <button class="next-btn" type="submit" onclick="updateData()">
                     Next Step
-                  </button></a
-                >
+                  </button>
               </div>
-            </div>
+            </form>
           </section>
       
           </main>

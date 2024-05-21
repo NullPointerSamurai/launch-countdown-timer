@@ -165,7 +165,7 @@ input {
   border-radius: 10px;
   transition: background-color 0.3s ease-in-out;
 }
-.plan .plan-label:focus-within {
+.highlight {
   background-color: var(--lightGray);
 }
 
