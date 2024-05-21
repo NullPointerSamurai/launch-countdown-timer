@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Frontend Mentor | Multi-step form</title>
+  </head>
+  <body>
+    <main>
+      <!-- Sidebar Section -->
+      <section class="sidebar">
+        <div class="step">
+          <div class="step-num ">1</div>
+          <h3 class="step-name">
+            Step 1<span class="step-description"> Your info</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <h3 class="step-name">
+            Step 2<span class="step-description"> Select plan</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <h3 class="step-name">
+            Step 3<span class="step-description"> Add-ons</span>
+          </h3>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3 class="step-name">
+            Step 4<span class="step-description">Summary</span>
+          </h3>
+        </div>
+      </section>
 
+      <!-- Step 1 Section -->
+
+      <section class="info-section page">
+        <h1 class="title">Personal info</h1>
+        <h2 class="subtitle">
+          Please provide your name, email address, and phone number.
+        </h2>
+        <div class="form-container">
+          <form action="">
+            <label for="name">Name</label><br />
+            <input
+            class="input"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="e.g. Stephen King"
+              required
+             
+            /><br />
+            <label for="email">Email Address</label><br />
+            <input
+            class="input"
+              type="email"
+              id="email"
+              name="email"
+              placeholder="e.g. stephenking@lorem.com"
+              required
+            /><br />
+            <label for="phone">Phone Number</label><br />
+            <input
+            class="input"
+              type="tel"
+              id="phone"
+              name="phone"
+              placeholder=" e.g. +1 234 567 890"
+              required
+            />
+            <p class="error" >The fields are required to be able to continue</p>
+            <div class="btn-wrapper desktop btn-step-one">
+              <button
+                type="button"
+                id="nextBtn"
+                class="next-btn"
+                onclick="nextPrev(1)"
+              >
+                Next Step
+              </button>
+            </div>
+            <!-- </section> -->
+          </form>
+          <div class="btn-wrapper mobile btn-step-one">
+            <button type="button" onclick="nextPrev(1)" class="next-btn">
+              Next Step
+            </button>
+          </div>
+        </section>
+          <!-- Step 2 Section -->
+
+          <section class="info-section page">
+            <h1 class="title">Select your plan</h1>
+            <h2 class="subtitle">
+              You have the option of monthly or yearly billing.
+            </h2>
+            <div class="plan-container">
+              <ul class="plan-wrapper">
+                <li class="plan">
+                  <label for="arcade" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                    id="arcade"
+                    class="radio-plan input"
+                      title="arcade"
+                      type="radio"
+                      name="radio-plan"
+                      value="9"
+                      checked="checked"
+                      required 
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Arcade</h3>
+                      <h4 id="arcade-price" class="plan-subtitle">$9/mo</h4>
+                      <p class="free-text">2 months free</p>
+                    </div>
+                  </label>
+                </li>
+                <li class="plan">
+                  <label for="advanced" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-advanced.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                    id="advanced"
+                    class="radio-plan input"
+                      title="advanced"
+                      type="radio"
+                      name="radio-plan"
+                      value="12"
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Advanced</h3>
+                      <h4 id="advanced-price" class="plan-subtitle">$12/mo</h4>
+                      <p class="free-text">2 months free</p>
+                    </div>
+                  </label>
+                </li>
+                <li class="plan">
+                  <label for="pro" class="plan-label">
+                    <div class="plan-img">
+                      <img
+                        src="./assets/images/icon-pro.svg"
+                        alt=""
+                        class="plan-img"
+                      />
+                    </div>
+
+                    <input
+                    id="pro"
+                    class="radio-plan input"
+                      title="pro"
+                      type="radio"
+                      name="radio-plan"
+                      value="15"
+                    />
+
+                    <div class="plan-text">
+                      <h3 class="plan-title">Pro</h3>
+                      <h4 id="pro-price" class="plan-subtitle">$15/mo</h4>
+                      <p class="free-text">2 months free</p>
+                    </div>
+                  </label>
+                </li>
+              </ul>
+              <div class="time-selector">
+                <label class="radio-label monthly" for="monthly" onclick="setMonthly()">Monthly</label>
+                <input
+                  class="radio-time input"
+                  type="radio"
+                  name="time-plan"
+                  id="monthly"
+                  value="monthly"
+                  />
+               
+                <label class="radio-label yearly" for="yearly" onclick="setYearly()">Yearly</label>
+                <input
+                  class="radio-time input"
+                  type="radio"
+                  name="time-plan"
+                  id="yearly"
+                  value="yearly"
+                />
+           
+                <div class="pill" "></div>
+                <div class="circle"></div>
+              </div>
+              <div class="btn-wrapper desktop">
+                <a class="prev-btn" href="index.html">Go Back</a>
+               <button class="next-btn" type="submit"  onclick="nextPrev(2)">
+                    Next Step
+                  </button>
+              </div>
+            </div>
+          </section>
+          </main>
+
+          <footer>
+            <div class="attribution">
+              Challenge by
+              <a
+                href="https://www.frontendmentor.io?ref=challenge"
+                target="_blank"
+                rel="noopener"
+                >Frontend Mentor</a
+              >. Coded by <a href="#">Your Name Here</a>.
+            </div>
+          </footer>
+     
+     
+   
+  </body>
+</html>
