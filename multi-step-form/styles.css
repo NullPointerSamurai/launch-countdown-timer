@@ -159,14 +159,13 @@ input {
   cursor: pointer;
 }
 .plan-label {
-  display: flex;
   width: 100%;
   height: 100%;
   padding: 1rem;
   border-radius: 10px;
   transition: background-color 0.3s ease-in-out;
 }
-.highlight {
+.plan .plan-label:focus-within {
   background-color: var(--lightGray);
 }
 
@@ -182,8 +181,6 @@ input {
 
 .plan-img {
   margin-right: 1rem;
-  width: 4rem;
-  height: auto;
 }
 .plan-text {
   display: flex;
@@ -335,9 +332,6 @@ input {
     transition: border 0.5s;
     cursor: pointer;
   }
-  .plan-img {
-    width: 3rem;
-  }
   .plan:hover {
     border: 1px solid var(--purplishBlue);
   }
@@ -347,17 +341,10 @@ input {
   .circle {
     margin-left: 37px;
   }
-  #monthly:checked ~ .circle {
-    left: 175px;
-  }
   #yearly:checked ~ .circle {
     left: 209px;
   }
-  .plan-label {
-    display: inline;
-  }
-  .radio-label {
-    width: 143px;
+  #monthly:checked ~ .circle {
+    left: 175px;
   }
 }
-
