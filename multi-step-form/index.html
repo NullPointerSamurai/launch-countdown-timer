@@ -60,7 +60,7 @@
           <form action="">
             <label for="name">Name</label><br />
             <input
-            class="input text-input"
+            class="input"
               type="text"
               id="name"
               name="name"
@@ -70,7 +70,7 @@
             /><br />
             <label for="email">Email Address</label><br />
             <input
-            class="input text-input"
+            class="input"
               type="email"
               id="email"
               name="email"
@@ -79,7 +79,7 @@
             /><br />
             <label for="phone">Phone Number</label><br />
             <input
-            class="input text-input"
+            class="input"
               type="tel"
               id="phone"
               name="phone"
@@ -97,7 +97,7 @@
                 Next Step
               </button>
             </div>
-           
+            <!-- </section> -->
           </form>
           <div class="btn-wrapper mobile btn-step-one">
             <button type="button" onclick="nextPrev(1)" class="next-btn">
@@ -105,7 +105,6 @@
             </button>
           </div>
         </section>
-      
           <!-- Step 2 Section -->
 
           <section class="info-section page">
@@ -113,13 +112,13 @@
             <h2 class="subtitle">
               You have the option of monthly or yearly billing.
             </h2>
-            <form  class="plan-container">
+            <div class="plan-container">
               <ul class="plan-wrapper">
                 <li class="plan">
-                  <label for="arcade" class="plan-label" id="arcade-label">
+                  <label for="arcade" class="plan-label">
                     <div class="plan-img">
                       <img
-                        src="./assets/images/icon-arcade.svg"
+                        src="./assets/images/icon-advanced.svg"
                         alt=""
                         class="plan-img"
                       />
@@ -215,24 +214,19 @@
                   value="yearly"
                 />
            
-                <div class="pill" ></div>
+                <div class="pill" onclick="toggleSubscription()"></div>
                 <div class="circle"></div>
               </div>
               <div class="btn-wrapper desktop">
                 <a class="prev-btn" href="index.html">Go Back</a>
-                <button class="next-btn" type="submit" onclick="updateData()">
+                <a
+                  ><button class="next-btn" type="submit" href="step-3.html">
                     Next Step
-                  </button>
+                  </button></a
+                >
               </div>
-              <div class="btn-wrapper mobile">
-                <a class="prev-btn" href="index.html">Go Back</a>
-                <button class="next-btn" type="submit" onclick="updateData()">
-                    Next Step
-                  </button>
-              </div>
-            </form>
+            </div>
           </section>
-      
           </main>
 
           <footer>
